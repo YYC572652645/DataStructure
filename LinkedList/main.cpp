@@ -8,7 +8,7 @@
 #include <memory.h>
 #include <malloc.h>
 
-#define PRINT(str) printf("%s\n", str);
+#define PRINT(str) printf("\n%s\n", str);
 
 typedef struct LinkListData
 {
@@ -16,9 +16,12 @@ typedef struct LinkListData
     LinkListData *pNext;  //指针域
 }LinkListData, *PLinkListData;
 
-PLinkListData createList();                              //创建单链表
-void showLinkList(PLinkListData pHead);                  //遍历链表
-void removeLinkListAt(PLinkListData pHead, int index);   //移除链表元素
+PLinkListData createList();                                                    //创建单链表
+void showLinkList(PLinkListData pHead);                                        //遍历链表
+void removeLinkListAt(PLinkListData pHead, int index);                         //移除链表元素
+void appendLinkList(PLinkListData pHead, PLinkListData appendData);            //追加链表元素
+PLinkListData reverseLinkList(PLinkListData pHead);                            //反转链表元素
+void insertLinkList(PLinkListData pHead, int index, PLinkListData insertData); //插入链表元素
 
 /*****************    主函数       **************/
 int main()
@@ -30,6 +33,18 @@ int main()
     showLinkList(pHead);
 
     removeLinkListAt(pHead, 0);
+
+    showLinkList(pHead);
+
+    pHead = reverseLinkList(pHead);
+
+    showLinkList(pHead);
+
+    PLinkListData pNew = (PLinkListData)malloc(sizeof(LinkListData));
+
+    pNew->data = 1000;
+
+    insertLinkList(pHead, 0, pNew);
 
     showLinkList(pHead);
 
@@ -70,11 +85,7 @@ PLinkListData createList()
 /*****************    遍历链表    **************/
 void showLinkList(PLinkListData pHead)
 {
-    if(NULL == pHead)
-    {
-        PRINT("show link list error");
-        return;
-    }
+    if(NULL == pHead) return;
 
     PRINT("print result:");
     PLinkListData pData = pHead->pNext;
@@ -88,12 +99,7 @@ void showLinkList(PLinkListData pHead)
 /*****************    移除链表元素    **************/
 void removeLinkListAt(PLinkListData pHead, int index)
 {
-    printf("%d   ", pHead->pNext->data);
-    if(NULL == pHead)
-    {
-        PRINT("link list error");
-        return;
-    }
+    if(NULL == pHead) return;
 
     int tempCount = 0;
     while(NULL != pHead->pNext)
@@ -109,5 +115,74 @@ void removeLinkListAt(PLinkListData pHead, int index)
 
         pHead = pHead->pNext;
         tempCount ++;
+    }
+}
+
+/*****************    追加链表元素    **************/
+void appendLinkList(PLinkListData pHead, PLinkListData appendData)
+{
+    if(NULL == pHead) return;
+
+    while(NULL != pHead->pNext) pHead = pHead->pNext;
+
+    appendData->pNext = NULL;
+    pHead->pNext = appendData;
+}
+
+/*****************    反转链表元素    **************/
+PLinkListData reverseLinkList(PLinkListData pHead)
+{
+    /**************************************************
+     * 注解：假设一条链表 头 -> 1 -> 2 -> 3
+     *
+     * NULL  <- 头   <-  1      2     3 (第一次循环)
+     * last  current   next
+     *
+     * NULL <-  头   <-  1  <-  2     3 (第二次循环)
+     *         last  current   next
+     *
+     * NULL <-  头   <-  1  <-  2  <- 3 (第三次循环)
+     *                 last  current next
+     *
+     * 此时3是头，头变为尾节点
+     * *************************************************/
+    if(NULL == pHead) return NULL;
+
+    PLinkListData reverseList = NULL;
+    PLinkListData currentNode = pHead;
+    PLinkListData lastNode = NULL;
+
+    while(NULL != currentNode)
+    {
+        PLinkListData nextNode = currentNode->pNext;
+
+        if(NULL == nextNode) reverseList = currentNode;
+
+        currentNode->pNext = lastNode;
+
+        lastNode = currentNode;
+
+        currentNode = nextNode;
+    }
+
+    return reverseList;
+}
+
+/*****************    插入链表元素    **************/
+void insertLinkList(PLinkListData pHead, int index, PLinkListData insertData)
+{
+    if(NULL == pHead) return;
+
+    int countData = 0;
+    while(NULL != pHead)
+    {
+        if(countData >= index)
+        {
+            insertData->pNext = pHead->pNext;
+            pHead->pNext = insertData;
+
+            break;
+        }
+        pHead = pHead->pNext;
     }
 }
