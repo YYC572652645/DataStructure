@@ -184,5 +184,6 @@ void insertLinkList(PLinkListData pHead, int index, PLinkListData insertData)
             break;
         }
         pHead = pHead->pNext;
+        countData ++;
     }
 }
