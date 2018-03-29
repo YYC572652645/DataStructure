@@ -4,11 +4,7 @@
  * 功能：线性结构之循环链表
  * **************************/
 
-#include <stdio.h>
-#include <memory.h>
-#include <malloc.h>
-
-#define PRINT(str) printf("\n%s\n", str);
+#include <iostream>
 
 typedef struct CircularList
 {
@@ -30,14 +26,14 @@ int main()
 {
     PCircularList pHead = createList();
 
-    PCircularList appendData = (PCircularList)malloc(sizeof(CircularListData));
+    PCircularList appendData = new CircularListData();
     appendData->data = 100;
 
     appendCircularList(pHead, appendData);
 
     removeCircularListAt(pHead, 3);
 
-    PCircularList insertData = (PCircularList)malloc(sizeof(CircularListData));
+    PCircularList insertData = new CircularListData();
     insertData->data = 200;
 
     insertCircularList(pHead, 3, insertData);
@@ -56,15 +52,15 @@ PCircularList createList()
 
     int length = 0;
     int value = 0;
-    PRINT("please input list length");
+    std::cout << "please input list length" << std::endl;
 
     scanf("%d", &length);
 
     PCircularList pCurrentNode = pHead;
     for(int i = 0; i < length; i ++)
     {
-        printf("please input %d data\n", i);
-        scanf("%d", &value);
+        std::cout << "please input" << i << "data";
+        std::cin >> value;
 
         PCircularList dataNode = (PCircularList)malloc(sizeof(CircularListData));
 
@@ -88,11 +84,11 @@ void showCircularList(PCircularList pHead)
 {
     PCircularList pCurrentNode = pHead->pNext;
 
-    PRINT("show list :");
+    std::cout << "show list :" << std::endl;
 
     while(pCurrentNode != pHead)
     {
-        printf("%d ", pCurrentNode->data);
+        std::cout << pCurrentNode->data << std::ends;
 
         pCurrentNode = pCurrentNode->pNext;
     }
@@ -114,7 +110,7 @@ void removeCircularListAt(PCircularList pHead, int index)
 
     pCurrentNode->pNext = pMidNode->pNext;
 
-    free(pMidNode);
+    delete pMidNode;
 }
 
 /*****************   追加链表元素    *****************/

@@ -4,11 +4,7 @@
  * 功能：线性结构之单链表
  * **************************/
 
-#include <stdio.h>
-#include <memory.h>
-#include <malloc.h>
-
-#define PRINT(str) printf("\n%s\n", str);
+#include <iostream>
 
 typedef struct LinkListData
 {
@@ -40,7 +36,7 @@ int main()
 
     showLinkList(pHead);
 
-    PLinkListData pNew = (PLinkListData)malloc(sizeof(LinkListData));
+    PLinkListData pNew = new LinkListData();
 
     pNew->data = 1000;
 
@@ -56,20 +52,20 @@ PLinkListData createList()
 {
     PLinkListData pHead = (PLinkListData)malloc(sizeof(LinkListData));
 
-    PRINT("please input node number");
+    std::cout << "please input node number" << std::endl;
 
     int length = 0;
     int value = 0;
-    scanf("%d", &length);
+    std::cin >> length;
 
     PLinkListData pCuurrent = pHead;
     pCuurrent->pNext = NULL;
 
     for(int i = 0; i < length; i ++)
     {
-        printf("please input %d data\n", i);
+        std::cout << "please input" << i << "data";
 
-        scanf("%d", &value);
+        std::cin >> value;
 
         PLinkListData pNew = (PLinkListData)malloc(sizeof(LinkListData));
 
@@ -87,11 +83,11 @@ void showLinkList(PLinkListData pHead)
 {
     if(NULL == pHead) return;
 
-    PRINT("print result:");
+    std::cout << "print result:" << std::endl;
     PLinkListData pData = pHead->pNext;
     while(NULL != pData)
     {
-        printf("%d  ", pData->data);
+        std::cout << pData->data << std::ends;
         pData = pData->pNext;
     }
 }
@@ -109,7 +105,7 @@ void removeLinkListAt(PLinkListData pHead, int index)
         if(tempCount == index)
         {
             pHead->pNext = pRemove->pNext;
-            free(pRemove);
+            delete pRemove;
             break;
         }
 

@@ -1,18 +1,14 @@
 /****************************
  * 作者：YYC
  * 日期：2018-03-13
- * 功能：线性结构之动态链表
+ * 功能：线性结构之链栈
  * **************************/
 
-#include <stdio.h>
-#include <malloc.h>
-#include <memory.h>
-
-#define PRINT(str) printf("\n%s\n", str);
+#include <iostream>
 
 typedef struct NodeListData
 {
-    int data;         //数据域
+    int data;             //数据域
     NodeListData *pNext;  //指针域
 }NodeListData, *PNodeList;
 
@@ -22,19 +18,17 @@ typedef struct StackListData
     PNodeList pBottom;  //栈底
 }StackListData, *PStackList;
 
-void initStackList(PStackList pStackList);
-void pushStack(PStackList pStackList,int data);
-bool popStack(PStackList pStackList, int *data);
-void traverseStackList(PStackList pStackList);
-bool isEmpty(PStackList pStackList);
-void clearStackList(PStackList pStackList);
-
+void initStackList(PStackList pStackList);         //初始化栈
+void pushStack(PStackList pStackList,int data);    //入栈
+bool popStack(PStackList pStackList, int *data);   //出栈
+void traverseStackList(PStackList pStackList);     //遍历输出
+bool isEmpty(PStackList pStackList);               //判断是否为空
+void clearStackList(PStackList pStackList);        //清空栈
 
 /*****************    主函数       **************/
 int main()
 {
     StackListData stackListData;
-
 
     initStackList(&stackListData);
 
@@ -48,13 +42,13 @@ int main()
 
     int popValue;
     popStack(&stackListData, &popValue);
-    printf("%d ", popValue);
+    std::cout<<popValue<<std::endl;
 
     popStack(&stackListData, &popValue);
-    printf("%d ", popValue);
+    std::cout<<popValue<<std::endl;
 
     popStack(&stackListData, &popValue);
-    printf("%d ", popValue);
+    std::cout<<popValue<<std::endl;
 
     clearStackList(&stackListData);
     traverseStackList(&stackListData);
@@ -65,15 +59,16 @@ int main()
 /*****************    初始化栈       **************/
 void initStackList(PStackList pStackList)
 {
-    pStackList->pTop = (PNodeList)malloc(sizeof(NodeListData));
+    pStackList->pTop = new NodeListData();
     pStackList->pBottom = pStackList->pTop;
 
     pStackList->pTop->pNext = NULL;
 }
+
 /*****************    入栈       **************/
 void pushStack(PStackList pStackList, int data)
 {
-    PNodeList pNew = (PNodeList)malloc(sizeof(NodeListData));
+    PNodeList pNew = new NodeListData();
 
     pNew->data = data;
     pNew->pNext = pStackList->pTop;
@@ -95,7 +90,7 @@ bool popStack(PStackList pStackList, int *data)
     pStackList->pTop =  pTop->pNext;
 
     //释放记住的栈顶元素
-    free(pTop);
+    delete pTop;
     pTop = NULL;
 
     return true;
@@ -106,10 +101,10 @@ void traverseStackList(PStackList pStackList)
 {
     PNodeList pTop = pStackList->pTop;
 
-    PRINT("output:");
+    std::cout<< "output:" << std::endl;
     while(pTop != pStackList->pBottom)
     {
-        printf("%d ", pTop->data);
+        std::cout<<pTop->data<<std::endl;
         pTop = pTop->pNext;
     }
 }
@@ -132,7 +127,7 @@ void clearStackList(PStackList pStackList)
         PNodeList pTop = pStackList->pTop;
         pStackList->pTop = pTop->pNext;
 
-        free(pTop);
+        delete pTop;
         pTop = NULL;
     }
 }

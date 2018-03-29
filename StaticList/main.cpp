@@ -1,15 +1,12 @@
-#include <stdio.h>
-
 /****************************
  * 作者：YYC
  * 日期：2018-02-27
  * 功能：线性结构之静态链表
  * **************************/
-#include <stdio.h>
-#include <memory.h>
+
+#include <iostream>
 
 #define MAXSIZE 100
-#define PRINT(str) printf("\n%s\n", str);
 
 typedef struct StaticListData
 {
@@ -184,7 +181,7 @@ void showStaticList(StaticListArray &array)
 
     while(startIndex)
     {
-        printf("%d\n", array[startIndex].data);
+        std::cout << array[startIndex].data << std::endl;
 
         startIndex = array[startIndex].cursor;
     }

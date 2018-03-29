@@ -4,11 +4,8 @@
  * 功能：线性结构之顺序存储结构
  * **************************/
 
-#include <stdio.h>
-#include <malloc.h>
+#include <iostream>
 #include <memory.h>
-
-#define PRINT(str) printf("%s\n", str);
 
 typedef struct OrderData
 {
@@ -66,13 +63,13 @@ void initArray(OrderData *orderData, int length)
 {
     if(NULL == orderData)
     {
-        PRINT("init error");
+        std::cout << "init error" << std::endl;
 
         return;
     }
     else
     {
-        orderData->pHead = (int *)malloc(sizeof(int) * length);
+        orderData->pHead = new int[length];
 
         orderData->length = length;
         orderData->validLength = 0;
@@ -84,12 +81,12 @@ bool isEmpty(OrderData *orderData)
 {
     if(NULL == orderData)
     {
-        PRINT("Array is NULL");
+        std::cout<< "Array is NULL" << std::endl;
         return true;
     }
     if(orderData->validLength == 0)
     {
-        PRINT("Array is Empty");
+        std::cout << "Array is Empty" << std::endl;
 
         return true;
     }
@@ -104,7 +101,7 @@ void showArray(OrderData *orderData)
     {
         for(int i = 0; i < orderData->validLength; i ++)
         {
-            printf("%d\n", orderData->pHead[i]);
+            std::cout << orderData->pHead[i] << std::endl;
         }
     }
 }
@@ -114,7 +111,7 @@ bool isFull(OrderData *orderData)
 {
     if(NULL == orderData)
     {
-        PRINT("Array is NULL");
+        std::cout << "Array is NULL" << std::endl;
         return true;
     }
 
@@ -163,7 +160,7 @@ bool removeArrayAt(OrderData *orderData, int index)
 {
     if(NULL == orderData)
     {
-        PRINT("Array is NULL");
+        std::cout<< "Array is NULL" << std::endl;
         return false;
     }
 
@@ -224,5 +221,5 @@ void inversionArray(OrderData *orderData)
     }
     *orderData = inversionData;
 
-    free(inversionData.pHead);
+    delete inversionData.pHead;
 }
