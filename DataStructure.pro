@@ -12,8 +12,9 @@
 # 6.线性结构之顺序栈
 # 7.线性结构之链栈
 # 8.线性结构之链队列
+# 9.线性结构之循环队列
 # ...................持续更新！
-# ...................最后更新时间：2018-03-29
+# ...................最后更新时间：2018-04-02
 #
 #*******************************************
 
@@ -21,6 +22,7 @@
 TEMPLATE = subdirs
 
 SUBDIRS += $$PWD/BidirectionalList/BidirectionalList.pro
+SUBDIRS += $$PWD/LoopQueue/LoopQueue.pro
 SUBDIRS += $$PWD/CircularList/CircularList.pro
 SUBDIRS += $$PWD/LinkedList/LinkedList.pro
 SUBDIRS += $$PWD/OrderMenmory/OrderMenmory.pro

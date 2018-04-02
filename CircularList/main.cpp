@@ -1,4 +1,4 @@
-/****************************
+﻿/****************************
  * 作者：YYC
  * 日期：2018-02-28
  * 功能：线性结构之循环链表
@@ -54,12 +54,12 @@ PCircularList createList()
     int value = 0;
     std::cout << "please input list length" << std::endl;
 
-    scanf("%d", &length);
+     std::cin >> length;
 
     PCircularList pCurrentNode = pHead;
     for(int i = 0; i < length; i ++)
     {
-        std::cout << "please input" << i << "data";
+        std::cout << "please input " << i << " data";
         std::cin >> value;
 
         PCircularList dataNode = (PCircularList)malloc(sizeof(CircularListData));
