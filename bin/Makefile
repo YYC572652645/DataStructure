@@ -32,7 +32,9 @@ SUBTARGETS    =  \
 		sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro \
 		sub-D--Program-Qt-DataStructure-StackList-StackList-pro \
 		sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro \
-		sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro
+		sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro \
+		sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro \
+		sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro
 
 
 sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-qmake_all:  FORCE
@@ -422,6 +424,92 @@ sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-uninstall_su
 sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-uninstall_subtargets: FORCE
 	@if not exist StaticStackList\ mkdir StaticStackList\ & if not exist StaticStackList\ exit 1
 	cd StaticStackList\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\StaticStackList\StaticStackList.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile uninstall
+sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-qmake_all: sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-qmake_all FORCE
+	@if not exist OrderString\ mkdir OrderString\ & if not exist OrderString\ exit 1
+	cd OrderString\ && $(QMAKE) D:\Program\Qt\DataStructure\OrderString\OrderString.pro -spec win32-g++ -o Makefile
+	cd OrderString\ && $(MAKE) -f Makefile qmake_all
+sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro: FORCE
+	@if not exist OrderString\ mkdir OrderString\ & if not exist OrderString\ exit 1
+	cd OrderString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\OrderString\OrderString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile
+sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-make_first-ordered: sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-make_first-ordered  FORCE
+	@if not exist OrderString\ mkdir OrderString\ & if not exist OrderString\ exit 1
+	cd OrderString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\OrderString\OrderString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile 
+sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-make_first: FORCE
+	@if not exist OrderString\ mkdir OrderString\ & if not exist OrderString\ exit 1
+	cd OrderString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\OrderString\OrderString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile 
+sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-all-ordered: sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-all-ordered  FORCE
+	@if not exist OrderString\ mkdir OrderString\ & if not exist OrderString\ exit 1
+	cd OrderString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\OrderString\OrderString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile all
+sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-all: FORCE
+	@if not exist OrderString\ mkdir OrderString\ & if not exist OrderString\ exit 1
+	cd OrderString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\OrderString\OrderString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile all
+sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-clean-ordered: sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-clean-ordered  FORCE
+	@if not exist OrderString\ mkdir OrderString\ & if not exist OrderString\ exit 1
+	cd OrderString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\OrderString\OrderString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile clean
+sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-clean: FORCE
+	@if not exist OrderString\ mkdir OrderString\ & if not exist OrderString\ exit 1
+	cd OrderString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\OrderString\OrderString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile clean
+sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-distclean-ordered: sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-distclean-ordered  FORCE
+	@if not exist OrderString\ mkdir OrderString\ & if not exist OrderString\ exit 1
+	cd OrderString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\OrderString\OrderString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile distclean
+sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-distclean: FORCE
+	@if not exist OrderString\ mkdir OrderString\ & if not exist OrderString\ exit 1
+	cd OrderString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\OrderString\OrderString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile distclean
+sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-install_subtargets-ordered: sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-install_subtargets-ordered  FORCE
+	@if not exist OrderString\ mkdir OrderString\ & if not exist OrderString\ exit 1
+	cd OrderString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\OrderString\OrderString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile install
+sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-install_subtargets: FORCE
+	@if not exist OrderString\ mkdir OrderString\ & if not exist OrderString\ exit 1
+	cd OrderString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\OrderString\OrderString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile install
+sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-uninstall_subtargets-ordered: sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-uninstall_subtargets-ordered  FORCE
+	@if not exist OrderString\ mkdir OrderString\ & if not exist OrderString\ exit 1
+	cd OrderString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\OrderString\OrderString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile uninstall
+sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-uninstall_subtargets: FORCE
+	@if not exist OrderString\ mkdir OrderString\ & if not exist OrderString\ exit 1
+	cd OrderString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\OrderString\OrderString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile uninstall
+sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-qmake_all: sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-qmake_all FORCE
+	@if not exist HeapString\ mkdir HeapString\ & if not exist HeapString\ exit 1
+	cd HeapString\ && $(QMAKE) D:\Program\Qt\DataStructure\HeapString\HeapString.pro -spec win32-g++ -o Makefile
+	cd HeapString\ && $(MAKE) -f Makefile qmake_all
+sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro: FORCE
+	@if not exist HeapString\ mkdir HeapString\ & if not exist HeapString\ exit 1
+	cd HeapString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\HeapString\HeapString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile
+sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-make_first-ordered: sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-make_first-ordered  FORCE
+	@if not exist HeapString\ mkdir HeapString\ & if not exist HeapString\ exit 1
+	cd HeapString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\HeapString\HeapString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile 
+sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-make_first: FORCE
+	@if not exist HeapString\ mkdir HeapString\ & if not exist HeapString\ exit 1
+	cd HeapString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\HeapString\HeapString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile 
+sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-all-ordered: sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-all-ordered  FORCE
+	@if not exist HeapString\ mkdir HeapString\ & if not exist HeapString\ exit 1
+	cd HeapString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\HeapString\HeapString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile all
+sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-all: FORCE
+	@if not exist HeapString\ mkdir HeapString\ & if not exist HeapString\ exit 1
+	cd HeapString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\HeapString\HeapString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile all
+sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-clean-ordered: sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-clean-ordered  FORCE
+	@if not exist HeapString\ mkdir HeapString\ & if not exist HeapString\ exit 1
+	cd HeapString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\HeapString\HeapString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile clean
+sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-clean: FORCE
+	@if not exist HeapString\ mkdir HeapString\ & if not exist HeapString\ exit 1
+	cd HeapString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\HeapString\HeapString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile clean
+sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-distclean-ordered: sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-distclean-ordered  FORCE
+	@if not exist HeapString\ mkdir HeapString\ & if not exist HeapString\ exit 1
+	cd HeapString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\HeapString\HeapString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile distclean
+sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-distclean: FORCE
+	@if not exist HeapString\ mkdir HeapString\ & if not exist HeapString\ exit 1
+	cd HeapString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\HeapString\HeapString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile distclean
+sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-install_subtargets-ordered: sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-install_subtargets-ordered  FORCE
+	@if not exist HeapString\ mkdir HeapString\ & if not exist HeapString\ exit 1
+	cd HeapString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\HeapString\HeapString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile install
+sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-install_subtargets: FORCE
+	@if not exist HeapString\ mkdir HeapString\ & if not exist HeapString\ exit 1
+	cd HeapString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\HeapString\HeapString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile install
+sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-uninstall_subtargets-ordered: sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-uninstall_subtargets-ordered  FORCE
+	@if not exist HeapString\ mkdir HeapString\ & if not exist HeapString\ exit 1
+	cd HeapString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\HeapString\HeapString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile uninstall
+sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-uninstall_subtargets: FORCE
+	@if not exist HeapString\ mkdir HeapString\ & if not exist HeapString\ exit 1
+	cd HeapString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\HeapString\HeapString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile uninstall
 
 Makefile: ../DataStructure.pro ../../../../SoftWare/QtCreater/5.6/mingw49_32/mkspecs/win32-g++/qmake.conf ../../../../SoftWare/QtCreater/5.6/mingw49_32/mkspecs/features/spec_pre.prf \
 		../../../../SoftWare/QtCreater/5.6/mingw49_32/mkspecs/qdevice.pri \
@@ -679,15 +767,15 @@ Makefile: ../DataStructure.pro ../../../../SoftWare/QtCreater/5.6/mingw49_32/mks
 qmake: FORCE
 	@$(QMAKE) -spec win32-g++ -o Makefile ..\DataStructure.pro
 
-qmake_all: sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-qmake_all sub-D--Program-Qt-DataStructure-LoopQueue-LoopQueue-pro-qmake_all sub-D--Program-Qt-DataStructure-CircularList-CircularList-pro-qmake_all sub-D--Program-Qt-DataStructure-LinkedList-LinkedList-pro-qmake_all sub-D--Program-Qt-DataStructure-OrderMenmory-OrderMenmory-pro-qmake_all sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro-qmake_all sub-D--Program-Qt-DataStructure-StackList-StackList-pro-qmake_all sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-qmake_all sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-qmake_all FORCE
+qmake_all: sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-qmake_all sub-D--Program-Qt-DataStructure-LoopQueue-LoopQueue-pro-qmake_all sub-D--Program-Qt-DataStructure-CircularList-CircularList-pro-qmake_all sub-D--Program-Qt-DataStructure-LinkedList-LinkedList-pro-qmake_all sub-D--Program-Qt-DataStructure-OrderMenmory-OrderMenmory-pro-qmake_all sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro-qmake_all sub-D--Program-Qt-DataStructure-StackList-StackList-pro-qmake_all sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-qmake_all sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-qmake_all sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-qmake_all sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-qmake_all FORCE
 
-make_first: sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-make_first-ordered sub-D--Program-Qt-DataStructure-LoopQueue-LoopQueue-pro-make_first-ordered sub-D--Program-Qt-DataStructure-CircularList-CircularList-pro-make_first-ordered sub-D--Program-Qt-DataStructure-LinkedList-LinkedList-pro-make_first-ordered sub-D--Program-Qt-DataStructure-OrderMenmory-OrderMenmory-pro-make_first-ordered sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro-make_first-ordered sub-D--Program-Qt-DataStructure-StackList-StackList-pro-make_first-ordered sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-make_first-ordered sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-make_first-ordered  FORCE
-all: sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-all-ordered sub-D--Program-Qt-DataStructure-LoopQueue-LoopQueue-pro-all-ordered sub-D--Program-Qt-DataStructure-CircularList-CircularList-pro-all-ordered sub-D--Program-Qt-DataStructure-LinkedList-LinkedList-pro-all-ordered sub-D--Program-Qt-DataStructure-OrderMenmory-OrderMenmory-pro-all-ordered sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro-all-ordered sub-D--Program-Qt-DataStructure-StackList-StackList-pro-all-ordered sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-all-ordered sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-all-ordered  FORCE
-clean: sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-clean-ordered sub-D--Program-Qt-DataStructure-LoopQueue-LoopQueue-pro-clean-ordered sub-D--Program-Qt-DataStructure-CircularList-CircularList-pro-clean-ordered sub-D--Program-Qt-DataStructure-LinkedList-LinkedList-pro-clean-ordered sub-D--Program-Qt-DataStructure-OrderMenmory-OrderMenmory-pro-clean-ordered sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro-clean-ordered sub-D--Program-Qt-DataStructure-StackList-StackList-pro-clean-ordered sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-clean-ordered sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-clean-ordered  FORCE
-distclean: sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-distclean-ordered sub-D--Program-Qt-DataStructure-LoopQueue-LoopQueue-pro-distclean-ordered sub-D--Program-Qt-DataStructure-CircularList-CircularList-pro-distclean-ordered sub-D--Program-Qt-DataStructure-LinkedList-LinkedList-pro-distclean-ordered sub-D--Program-Qt-DataStructure-OrderMenmory-OrderMenmory-pro-distclean-ordered sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro-distclean-ordered sub-D--Program-Qt-DataStructure-StackList-StackList-pro-distclean-ordered sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-distclean-ordered sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-distclean-ordered  FORCE
+make_first: sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-make_first-ordered sub-D--Program-Qt-DataStructure-LoopQueue-LoopQueue-pro-make_first-ordered sub-D--Program-Qt-DataStructure-CircularList-CircularList-pro-make_first-ordered sub-D--Program-Qt-DataStructure-LinkedList-LinkedList-pro-make_first-ordered sub-D--Program-Qt-DataStructure-OrderMenmory-OrderMenmory-pro-make_first-ordered sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro-make_first-ordered sub-D--Program-Qt-DataStructure-StackList-StackList-pro-make_first-ordered sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-make_first-ordered sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-make_first-ordered sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-make_first-ordered sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-make_first-ordered  FORCE
+all: sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-all-ordered sub-D--Program-Qt-DataStructure-LoopQueue-LoopQueue-pro-all-ordered sub-D--Program-Qt-DataStructure-CircularList-CircularList-pro-all-ordered sub-D--Program-Qt-DataStructure-LinkedList-LinkedList-pro-all-ordered sub-D--Program-Qt-DataStructure-OrderMenmory-OrderMenmory-pro-all-ordered sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro-all-ordered sub-D--Program-Qt-DataStructure-StackList-StackList-pro-all-ordered sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-all-ordered sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-all-ordered sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-all-ordered sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-all-ordered  FORCE
+clean: sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-clean-ordered sub-D--Program-Qt-DataStructure-LoopQueue-LoopQueue-pro-clean-ordered sub-D--Program-Qt-DataStructure-CircularList-CircularList-pro-clean-ordered sub-D--Program-Qt-DataStructure-LinkedList-LinkedList-pro-clean-ordered sub-D--Program-Qt-DataStructure-OrderMenmory-OrderMenmory-pro-clean-ordered sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro-clean-ordered sub-D--Program-Qt-DataStructure-StackList-StackList-pro-clean-ordered sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-clean-ordered sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-clean-ordered sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-clean-ordered sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-clean-ordered  FORCE
+distclean: sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-distclean-ordered sub-D--Program-Qt-DataStructure-LoopQueue-LoopQueue-pro-distclean-ordered sub-D--Program-Qt-DataStructure-CircularList-CircularList-pro-distclean-ordered sub-D--Program-Qt-DataStructure-LinkedList-LinkedList-pro-distclean-ordered sub-D--Program-Qt-DataStructure-OrderMenmory-OrderMenmory-pro-distclean-ordered sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro-distclean-ordered sub-D--Program-Qt-DataStructure-StackList-StackList-pro-distclean-ordered sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-distclean-ordered sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-distclean-ordered sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-distclean-ordered sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-distclean-ordered  FORCE
 	-$(DEL_FILE) Makefile
-install_subtargets: sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-install_subtargets-ordered sub-D--Program-Qt-DataStructure-LoopQueue-LoopQueue-pro-install_subtargets-ordered sub-D--Program-Qt-DataStructure-CircularList-CircularList-pro-install_subtargets-ordered sub-D--Program-Qt-DataStructure-LinkedList-LinkedList-pro-install_subtargets-ordered sub-D--Program-Qt-DataStructure-OrderMenmory-OrderMenmory-pro-install_subtargets-ordered sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro-install_subtargets-ordered sub-D--Program-Qt-DataStructure-StackList-StackList-pro-install_subtargets-ordered sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-install_subtargets-ordered sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-install_subtargets-ordered FORCE
-uninstall_subtargets: sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-uninstall_subtargets-ordered sub-D--Program-Qt-DataStructure-LoopQueue-LoopQueue-pro-uninstall_subtargets-ordered sub-D--Program-Qt-DataStructure-CircularList-CircularList-pro-uninstall_subtargets-ordered sub-D--Program-Qt-DataStructure-LinkedList-LinkedList-pro-uninstall_subtargets-ordered sub-D--Program-Qt-DataStructure-OrderMenmory-OrderMenmory-pro-uninstall_subtargets-ordered sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro-uninstall_subtargets-ordered sub-D--Program-Qt-DataStructure-StackList-StackList-pro-uninstall_subtargets-ordered sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-uninstall_subtargets-ordered sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-uninstall_subtargets-ordered FORCE
+install_subtargets: sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-install_subtargets-ordered sub-D--Program-Qt-DataStructure-LoopQueue-LoopQueue-pro-install_subtargets-ordered sub-D--Program-Qt-DataStructure-CircularList-CircularList-pro-install_subtargets-ordered sub-D--Program-Qt-DataStructure-LinkedList-LinkedList-pro-install_subtargets-ordered sub-D--Program-Qt-DataStructure-OrderMenmory-OrderMenmory-pro-install_subtargets-ordered sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro-install_subtargets-ordered sub-D--Program-Qt-DataStructure-StackList-StackList-pro-install_subtargets-ordered sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-install_subtargets-ordered sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-install_subtargets-ordered sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-install_subtargets-ordered sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-install_subtargets-ordered FORCE
+uninstall_subtargets: sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-uninstall_subtargets-ordered sub-D--Program-Qt-DataStructure-LoopQueue-LoopQueue-pro-uninstall_subtargets-ordered sub-D--Program-Qt-DataStructure-CircularList-CircularList-pro-uninstall_subtargets-ordered sub-D--Program-Qt-DataStructure-LinkedList-LinkedList-pro-uninstall_subtargets-ordered sub-D--Program-Qt-DataStructure-OrderMenmory-OrderMenmory-pro-uninstall_subtargets-ordered sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro-uninstall_subtargets-ordered sub-D--Program-Qt-DataStructure-StackList-StackList-pro-uninstall_subtargets-ordered sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-uninstall_subtargets-ordered sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-uninstall_subtargets-ordered sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-uninstall_subtargets-ordered sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-uninstall_subtargets-ordered FORCE
 
 sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-debug_ordered:
 	@if not exist BidirectionalList\ mkdir BidirectionalList\ & if not exist BidirectionalList\ exit 1
@@ -716,7 +804,13 @@ sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-debug_ordered: sub-D--
 sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-debug_ordered: sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-debug_ordered 
 	@if not exist StaticStackList\ mkdir StaticStackList\ & if not exist StaticStackList\ exit 1
 	cd StaticStackList\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\StaticStackList\StaticStackList.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile debug
-debug: sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-debug_ordered sub-D--Program-Qt-DataStructure-LoopQueue-LoopQueue-pro-debug_ordered sub-D--Program-Qt-DataStructure-CircularList-CircularList-pro-debug_ordered sub-D--Program-Qt-DataStructure-LinkedList-LinkedList-pro-debug_ordered sub-D--Program-Qt-DataStructure-OrderMenmory-OrderMenmory-pro-debug_ordered sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro-debug_ordered sub-D--Program-Qt-DataStructure-StackList-StackList-pro-debug_ordered sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-debug_ordered sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-debug_ordered
+sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-debug_ordered: sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-debug_ordered 
+	@if not exist OrderString\ mkdir OrderString\ & if not exist OrderString\ exit 1
+	cd OrderString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\OrderString\OrderString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile debug
+sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-debug_ordered: sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-debug_ordered 
+	@if not exist HeapString\ mkdir HeapString\ & if not exist HeapString\ exit 1
+	cd HeapString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\HeapString\HeapString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile debug
+debug: sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-debug_ordered sub-D--Program-Qt-DataStructure-LoopQueue-LoopQueue-pro-debug_ordered sub-D--Program-Qt-DataStructure-CircularList-CircularList-pro-debug_ordered sub-D--Program-Qt-DataStructure-LinkedList-LinkedList-pro-debug_ordered sub-D--Program-Qt-DataStructure-OrderMenmory-OrderMenmory-pro-debug_ordered sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro-debug_ordered sub-D--Program-Qt-DataStructure-StackList-StackList-pro-debug_ordered sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-debug_ordered sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-debug_ordered sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-debug_ordered sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-debug_ordered
 
 sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-release_ordered:
 	@if not exist BidirectionalList\ mkdir BidirectionalList\ & if not exist BidirectionalList\ exit 1
@@ -745,7 +839,13 @@ sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-release_ordered: sub-D
 sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-release_ordered: sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-release_ordered 
 	@if not exist StaticStackList\ mkdir StaticStackList\ & if not exist StaticStackList\ exit 1
 	cd StaticStackList\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\StaticStackList\StaticStackList.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile release
-release: sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-release_ordered sub-D--Program-Qt-DataStructure-LoopQueue-LoopQueue-pro-release_ordered sub-D--Program-Qt-DataStructure-CircularList-CircularList-pro-release_ordered sub-D--Program-Qt-DataStructure-LinkedList-LinkedList-pro-release_ordered sub-D--Program-Qt-DataStructure-OrderMenmory-OrderMenmory-pro-release_ordered sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro-release_ordered sub-D--Program-Qt-DataStructure-StackList-StackList-pro-release_ordered sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-release_ordered sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-release_ordered
+sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-release_ordered: sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-release_ordered 
+	@if not exist OrderString\ mkdir OrderString\ & if not exist OrderString\ exit 1
+	cd OrderString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\OrderString\OrderString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile release
+sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-release_ordered: sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-release_ordered 
+	@if not exist HeapString\ mkdir HeapString\ & if not exist HeapString\ exit 1
+	cd HeapString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\HeapString\HeapString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile release
+release: sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-release_ordered sub-D--Program-Qt-DataStructure-LoopQueue-LoopQueue-pro-release_ordered sub-D--Program-Qt-DataStructure-CircularList-CircularList-pro-release_ordered sub-D--Program-Qt-DataStructure-LinkedList-LinkedList-pro-release_ordered sub-D--Program-Qt-DataStructure-OrderMenmory-OrderMenmory-pro-release_ordered sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro-release_ordered sub-D--Program-Qt-DataStructure-StackList-StackList-pro-release_ordered sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-release_ordered sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-release_ordered sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-release_ordered sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-release_ordered
 
 sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-check_ordered:
 	@if not exist BidirectionalList\ mkdir BidirectionalList\ & if not exist BidirectionalList\ exit 1
@@ -774,7 +874,13 @@ sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-check_ordered: sub-D--
 sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-check_ordered: sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-check_ordered 
 	@if not exist StaticStackList\ mkdir StaticStackList\ & if not exist StaticStackList\ exit 1
 	cd StaticStackList\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\StaticStackList\StaticStackList.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile check
-check: sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-check_ordered sub-D--Program-Qt-DataStructure-LoopQueue-LoopQueue-pro-check_ordered sub-D--Program-Qt-DataStructure-CircularList-CircularList-pro-check_ordered sub-D--Program-Qt-DataStructure-LinkedList-LinkedList-pro-check_ordered sub-D--Program-Qt-DataStructure-OrderMenmory-OrderMenmory-pro-check_ordered sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro-check_ordered sub-D--Program-Qt-DataStructure-StackList-StackList-pro-check_ordered sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-check_ordered sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-check_ordered
+sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-check_ordered: sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-check_ordered 
+	@if not exist OrderString\ mkdir OrderString\ & if not exist OrderString\ exit 1
+	cd OrderString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\OrderString\OrderString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile check
+sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-check_ordered: sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-check_ordered 
+	@if not exist HeapString\ mkdir HeapString\ & if not exist HeapString\ exit 1
+	cd HeapString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\HeapString\HeapString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile check
+check: sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-check_ordered sub-D--Program-Qt-DataStructure-LoopQueue-LoopQueue-pro-check_ordered sub-D--Program-Qt-DataStructure-CircularList-CircularList-pro-check_ordered sub-D--Program-Qt-DataStructure-LinkedList-LinkedList-pro-check_ordered sub-D--Program-Qt-DataStructure-OrderMenmory-OrderMenmory-pro-check_ordered sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro-check_ordered sub-D--Program-Qt-DataStructure-StackList-StackList-pro-check_ordered sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-check_ordered sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-check_ordered sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-check_ordered sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-check_ordered
 
 sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-benchmark_ordered:
 	@if not exist BidirectionalList\ mkdir BidirectionalList\ & if not exist BidirectionalList\ exit 1
@@ -803,7 +909,13 @@ sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-benchmark_ordered: sub
 sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-benchmark_ordered: sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-benchmark_ordered 
 	@if not exist StaticStackList\ mkdir StaticStackList\ & if not exist StaticStackList\ exit 1
 	cd StaticStackList\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\StaticStackList\StaticStackList.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile benchmark
-benchmark: sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-benchmark_ordered sub-D--Program-Qt-DataStructure-LoopQueue-LoopQueue-pro-benchmark_ordered sub-D--Program-Qt-DataStructure-CircularList-CircularList-pro-benchmark_ordered sub-D--Program-Qt-DataStructure-LinkedList-LinkedList-pro-benchmark_ordered sub-D--Program-Qt-DataStructure-OrderMenmory-OrderMenmory-pro-benchmark_ordered sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro-benchmark_ordered sub-D--Program-Qt-DataStructure-StackList-StackList-pro-benchmark_ordered sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-benchmark_ordered sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-benchmark_ordered
+sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-benchmark_ordered: sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-benchmark_ordered 
+	@if not exist OrderString\ mkdir OrderString\ & if not exist OrderString\ exit 1
+	cd OrderString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\OrderString\OrderString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile benchmark
+sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-benchmark_ordered: sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-benchmark_ordered 
+	@if not exist HeapString\ mkdir HeapString\ & if not exist HeapString\ exit 1
+	cd HeapString\ && ( if not exist Makefile $(QMAKE) D:\Program\Qt\DataStructure\HeapString\HeapString.pro -spec win32-g++ -o Makefile ) && $(MAKE) -f Makefile benchmark
+benchmark: sub-D--Program-Qt-DataStructure-BidirectionalList-BidirectionalList-pro-benchmark_ordered sub-D--Program-Qt-DataStructure-LoopQueue-LoopQueue-pro-benchmark_ordered sub-D--Program-Qt-DataStructure-CircularList-CircularList-pro-benchmark_ordered sub-D--Program-Qt-DataStructure-LinkedList-LinkedList-pro-benchmark_ordered sub-D--Program-Qt-DataStructure-OrderMenmory-OrderMenmory-pro-benchmark_ordered sub-D--Program-Qt-DataStructure-QueueList-QueueList-pro-benchmark_ordered sub-D--Program-Qt-DataStructure-StackList-StackList-pro-benchmark_ordered sub-D--Program-Qt-DataStructure-StaticList-StaticList-pro-benchmark_ordered sub-D--Program-Qt-DataStructure-StaticStackList-StaticStackList-pro-benchmark_ordered sub-D--Program-Qt-DataStructure-OrderString-OrderString-pro-benchmark_ordered sub-D--Program-Qt-DataStructure-HeapString-HeapString-pro-benchmark_ordered
 install:install_subtargets  FORCE
 
 uninstall: uninstall_subtargets FORCE

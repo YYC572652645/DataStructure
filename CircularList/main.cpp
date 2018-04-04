@@ -20,7 +20,6 @@ PCircularList reverseCircularList(PCircularList pHead);                         
 void insertCircularList(PCircularList pHead, int index, PCircularList insertData); //插入链表元素
 int getListLength(PCircularList pHead);                                            //获取链表长度
 
-
 /*****************   主函数        *****************/
 int main()
 {
