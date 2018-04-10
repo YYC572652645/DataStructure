@@ -3,7 +3,6 @@
 # 作者：YYC
 # 日期：2018-03-29
 # 说明：
-#
 # 使用C++构建数据结构，所有数据结构源码均放在此项目中
 #
 # 01.线性结构之顺序存储结构
@@ -13,20 +12,23 @@
 # 05.线性结构之静态链表
 # 06.线性结构之顺序栈
 # 07.线性结构之链栈
-# 08.线性结构之链队列
+# 08.线性结构之链队
 # 09.线性结构之循环队列
 # 10.线性结构之串的顺序存储之截串
 # 11.线性结构之串的堆分配存储
+# 12.非线性结构之二叉树
 #
 # ...................持续更新中！
-# ...................最后更新时间：2018-04-03
+# ...................最后更新时间：2018-04-10
 #
 #*******************************************
+
 
 
 TEMPLATE = subdirs
 
 SUBDIRS += $$PWD/BidirectionalList/BidirectionalList.pro
+SUBDIRS += $$PWD/BitTree/BitTree.pro 
 SUBDIRS += $$PWD/LoopQueue/LoopQueue.pro
 SUBDIRS += $$PWD/CircularList/CircularList.pro
 SUBDIRS += $$PWD/LinkedList/LinkedList.pro
