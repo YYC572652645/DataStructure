@@ -17,6 +17,7 @@
 # 10.线性结构之串的顺序存储之截串
 # 11.线性结构之串的堆分配存储
 # 12.非线性结构之二叉树
+# 13.非线性结构之线索二叉树
 #
 # ...................持续更新中！
 # ...................最后更新时间：2018-04-11
@@ -28,6 +29,7 @@
 TEMPLATE = subdirs
 
 SUBDIRS += $$PWD/BidirectionalList/BidirectionalList.pro
+SUBDIRS += $$PWD/BiThrNode/BiThrNode.pro
 SUBDIRS += $$PWD/BitTree/BitTree.pro 
 SUBDIRS += $$PWD/LoopQueue/LoopQueue.pro
 SUBDIRS += $$PWD/CircularList/CircularList.pro

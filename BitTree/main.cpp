@@ -6,8 +6,8 @@
 
 #include <iostream>
 
-#define PRIENDL(arg) std::cout<< arg <<std::endl;
-#define PRIENDS(arg) std::cout<< arg <<std::ends;
+#define PRIENDL(arg) std::cout << arg <<std::endl;
+#define PRIENDS(arg) std::cout << arg <<std::ends;
 #define CINARG(arg)  std::cin >> arg;
 
 typedef struct BitTree
@@ -19,9 +19,9 @@ typedef struct BitTree
 }BitTree, *PBitTree;
 
 PBitTree createBitTree();                      //创建二叉树
-void PreOrderTraverse(PBitTree bitTree);       //先序遍历之递归写法
-void MidOrderTraverse(PBitTree bitTree);       //中序遍历之递归写法
-void LastOrderTraverse(PBitTree bitTree);      //后序遍历之递归写法
+void preOrderTraverse(PBitTree bitTree);       //先序遍历之递归写法
+void midOrderTraverse(PBitTree bitTree);       //中序遍历之递归写法
+void lastOrderTraverse(PBitTree bitTree);      //后序遍历之递归写法
 int  sumNode(PBitTree bitTree);                //二叉树节点总数
 int  depthNode(PBitTree bitTree);              //二叉树深度
 int  leafNode(PBitTree bitTree);               //叶子节点数
@@ -33,13 +33,13 @@ int main()
 
     bitTree = createBitTree();
 
-    PreOrderTraverse(bitTree);
+    preOrderTraverse(bitTree);
     std::cout << std::endl;
 
-    MidOrderTraverse(bitTree);
+    midOrderTraverse(bitTree);
     std::cout << std::endl;
 
-    LastOrderTraverse(bitTree);
+    lastOrderTraverse(bitTree);
     std::cout << std::endl;
 
     std::cout << sumNode(bitTree);
@@ -99,36 +99,36 @@ PBitTree createBitTree()
 }
 
 /*****************   先序遍历之递归写法     *****************/
-void PreOrderTraverse(PBitTree bitTree)
+void preOrderTraverse(PBitTree bitTree)
 {
     if(NULL != bitTree)
     {
         PRIENDS(bitTree->data);
 
-        PreOrderTraverse(bitTree->leftChild);
-        PreOrderTraverse(bitTree->rightChild);
+        preOrderTraverse(bitTree->leftChild);
+        preOrderTraverse(bitTree->rightChild);
     }
 }
 
 /*****************   中序遍历之递归写法     *****************/
-void MidOrderTraverse(PBitTree bitTree)
+void midOrderTraverse(PBitTree bitTree)
 {
     if(NULL != bitTree)
     {
-        MidOrderTraverse(bitTree->leftChild);
+        midOrderTraverse(bitTree->leftChild);
         PRIENDS(bitTree->data);
 
-        MidOrderTraverse(bitTree->rightChild);
+        midOrderTraverse(bitTree->rightChild);
     }
 }
 
 /*****************   后序遍历之递归写法     *****************/
-void LastOrderTraverse(PBitTree bitTree)
+void lastOrderTraverse(PBitTree bitTree)
 {
     if(NULL != bitTree)
     {
-        LastOrderTraverse(bitTree->leftChild);
-        LastOrderTraverse(bitTree->rightChild);
+        lastOrderTraverse(bitTree->leftChild);
+        lastOrderTraverse(bitTree->rightChild);
         PRIENDS(bitTree->data);
     }
 }

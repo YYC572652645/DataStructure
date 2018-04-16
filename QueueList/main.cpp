@@ -1,4 +1,4 @@
-/****************************
+﻿/****************************
  * 作者：YYC
  * 日期：2018-03-29
  * 功能：线性结构之链队列
@@ -41,7 +41,7 @@ int main()
 
     int data;
     deleteQueue(linkQueue, data);
-    std::cout<<data<<std::endl;
+    std::cout << data << std::endl;
 
     showQueue(linkQueue);
 
