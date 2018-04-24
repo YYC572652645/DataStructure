@@ -27,6 +27,7 @@ int main()
     String stringFirst = "12345aa";
     String stringSecond = "aa";
 
+
     String tempStr;
 
     rightStr(tempStr, stringFirst, 2);

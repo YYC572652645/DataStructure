@@ -18,9 +18,10 @@
 # 11.线性结构之串的堆分配存储
 # 12.非线性结构之二叉树
 # 13.非线性结构之线索二叉树
+# 14.排序大综合
 #
 # ...................持续更新中！
-# ...................最后更新时间：2018-04-11
+# ...................最后更新时间：2018-04-17
 #
 #*******************************************
 
@@ -41,5 +42,5 @@ SUBDIRS += $$PWD/StaticList/StaticList.pro
 SUBDIRS += $$PWD/StaticStackList/StaticStackList.pro
 SUBDIRS += $$PWD/OrderString/OrderString.pro
 SUBDIRS += $$PWD/HeapString/HeapString.pro
-
+SUBDIRS += $$PWD/SortArray/SortArray.pro
 CONFIG += ordered
