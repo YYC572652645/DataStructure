@@ -1,6 +1,6 @@
-﻿/****************************
+/****************************
  * 作者：YYC
- * 日期：2018-04-17
+ * 日期：2018-07-04
  * 功能：排序大综合
  * **************************/
 
@@ -26,10 +26,11 @@ int main()
 {
     int arrayData[] = {3, 1, 20, 5, 8, 10, 4, 11, 2};
 
-    bubbleSort(arrayData, ARRAYCOUNT(arrayData));
-    selectionSort(arrayData, ARRAYCOUNT(arrayData));
-    insertSort(arrayData, ARRAYCOUNT(arrayData));
+    //bubbleSort(arrayData, ARRAYCOUNT(arrayData));
+    //selectionSort(arrayData, ARRAYCOUNT(arrayData));
+    //insertSort(arrayData, ARRAYCOUNT(arrayData));
 
+    shellSort(arrayData, ARRAYCOUNT(arrayData));
     printArray(arrayData, ARRAYCOUNT(arrayData));
 
     return 0;
@@ -121,6 +122,29 @@ void radixSort(int *arrayData, int length)
 /*****************   希尔排序        *****************/
 void shellSort(int *arrayData, int length)
 {
+    int i, j;
+    int tempData = 0;
+    int increment = length;
+
+    while(increment > 1)
+    {
+        increment = increment / 3 + 1;
+
+        for(i = increment; i < length; i ++)
+        {
+            if(arrayData[i] < arrayData[i - increment])
+            {
+                tempData = arrayData[i];
+
+                for(j = i - increment; j >= 0 && tempData < arrayData[j]; j -= increment)
+                {
+                    arrayData[j + increment] = arrayData[j];
+                }
+
+                arrayData[j + increment] = tempData;
+            }
+        }
+    }
 
 }
 
@@ -134,5 +158,4 @@ void printArray(int *arrayData, int length)
     }
     PRIENDL("");
 }
-
 

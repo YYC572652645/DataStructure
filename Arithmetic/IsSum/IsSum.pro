@@ -3,7 +3,7 @@ QT -= gui
 
 CONFIG += c++11
 
-TARGET = SortArray
+TARGET = IsSum
 CONFIG += console
 CONFIG -= app_bundle
 
