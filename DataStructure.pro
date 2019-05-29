@@ -29,18 +29,18 @@
 
 TEMPLATE = subdirs
 
-SUBDIRS += $$PWD/BidirectionalList/BidirectionalList.pro
-SUBDIRS += $$PWD/BiThrNode/BiThrNode.pro
-SUBDIRS += $$PWD/BitTree/BitTree.pro
-SUBDIRS += $$PWD/LoopQueue/LoopQueue.pro
-SUBDIRS += $$PWD/CircularList/CircularList.pro
-SUBDIRS += $$PWD/LinkedList/LinkedList.pro
-SUBDIRS += $$PWD/OrderMenmory/OrderMenmory.pro
-SUBDIRS += $$PWD/QueueList/QueueList.pro
-SUBDIRS += $$PWD/StackList/StackList.pro
-SUBDIRS += $$PWD/StaticList/StaticList.pro
-SUBDIRS += $$PWD/StaticStackList/StaticStackList.pro
-SUBDIRS += $$PWD/OrderString/OrderString.pro
-SUBDIRS += $$PWD/HeapString/HeapString.pro
+SUBDIRS += $$PWD/CDataStructure/BidirectionalList/BidirectionalList.pro
+SUBDIRS += $$PWD/CDataStructure/BiThrNode/BiThrNode.pro
+SUBDIRS += $$PWD/CDataStructure/BitTree/BitTree.pro
+SUBDIRS += $$PWD/CDataStructure/LoopQueue/LoopQueue.pro
+SUBDIRS += $$PWD/CDataStructure/CircularList/CircularList.pro
+SUBDIRS += $$PWD/CDataStructure/LinkedList/LinkedList.pro
+SUBDIRS += $$PWD/CDataStructure/OrderMenmory/OrderMenmory.pro
+SUBDIRS += $$PWD/CDataStructure/QueueList/QueueList.pro
+SUBDIRS += $$PWD/CDataStructure/StackList/StackList.pro
+SUBDIRS += $$PWD/CDataStructure/StaticList/StaticList.pro
+SUBDIRS += $$PWD/CDataStructure/StaticStackList/StaticStackList.pro
+SUBDIRS += $$PWD/CDataStructure/OrderString/OrderString.pro
+SUBDIRS += $$PWD/CDataStructure/HeapString/HeapString.pro
 SUBDIRS += $$PWD/Arithmetic/Arithmetic.pro
 CONFIG += ordered
