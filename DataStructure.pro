@@ -29,18 +29,7 @@
 
 TEMPLATE = subdirs
 
-SUBDIRS += $$PWD/CDataStructure/BidirectionalList/BidirectionalList.pro
-SUBDIRS += $$PWD/CDataStructure/BiThrNode/BiThrNode.pro
-SUBDIRS += $$PWD/CDataStructure/BitTree/BitTree.pro
-SUBDIRS += $$PWD/CDataStructure/LoopQueue/LoopQueue.pro
-SUBDIRS += $$PWD/CDataStructure/CircularList/CircularList.pro
-SUBDIRS += $$PWD/CDataStructure/LinkedList/LinkedList.pro
-SUBDIRS += $$PWD/CDataStructure/OrderMenmory/OrderMenmory.pro
-SUBDIRS += $$PWD/CDataStructure/QueueList/QueueList.pro
-SUBDIRS += $$PWD/CDataStructure/StackList/StackList.pro
-SUBDIRS += $$PWD/CDataStructure/StaticList/StaticList.pro
-SUBDIRS += $$PWD/CDataStructure/StaticStackList/StaticStackList.pro
-SUBDIRS += $$PWD/CDataStructure/OrderString/OrderString.pro
-SUBDIRS += $$PWD/CDataStructure/HeapString/HeapString.pro
+
 SUBDIRS += $$PWD/Arithmetic/Arithmetic.pro
+SUBDIRS += $$PWD/CppDataStructure/CppDataStructure.pro
 CONFIG += ordered
