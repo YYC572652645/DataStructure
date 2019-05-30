@@ -37,7 +37,7 @@ int MyStack<T>::size()
 
 
 template<class T>
-void MyStack<T>::push(T stackValue)
+void MyStack<T>::push(const T &stackValue)
 {
     stackElements.push_back(stackValue);
 }

@@ -12,7 +12,7 @@ public:
     T top() const;
     bool isEmpty();
     int size();
-    void push(T stackValue);
+    void push(const T &stackValue);
 private:
     vector<T> stackElements;
 };
