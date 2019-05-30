@@ -1,15 +1,21 @@
 ﻿#ifndef MYSTACK_H
 #define MYSTACK_H
 #include <vector>
+#include <iostream>
+using namespace std;
 
-template<typename T>
+template<class T>
 class MyStack
 {
-private:
-    std::vector<T> stackElements;
 public:
-    void push(const T &stackValue);
-
+    T pop();
+    T top() const;
+    bool isEmpty();
+    int size();
+    void push(T stackValue);
+private:
+    vector<T> stackElements;
 };
+
 
 #endif // MYSTACK_H
