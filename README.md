@@ -25,7 +25,7 @@
 > * 线性结构之队列
 
 ## 示例代码  
-'''
+``` c++
 #include <iostream>
 
 #define PRIENDL(arg) std::cout << arg <<std::endl;
@@ -201,7 +201,7 @@ int leafNode(PBitTree bitTree)
     }
 
 }
-'''
+```
 
 ## 项目简介
 作者:`灏夏星辰`    
