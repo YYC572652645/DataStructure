@@ -1,4 +1,10 @@
-﻿#include "myqueue.h"
+﻿/****************************
+ * 作者：YYC
+ * 日期：2019-06-03
+ * 功能：用模板实现队列
+ * **************************/
+
+#include "myqueue.h"
 #include "myqueue.cpp"
 #include <iostream>
 using namespace std;

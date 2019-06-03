@@ -1,4 +1,10 @@
-﻿#include "mystack.h"
+﻿/****************************
+ * 作者：YYC
+ * 日期：2019-06-03
+ * 功能：用模板实现栈
+ * **************************/
+
+#include "mystack.h"
 #include "mystack.cpp"
 #include <iostream>
 using namespace std;
